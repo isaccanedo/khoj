@@ -1,0 +1,201 @@
+div.chatMessageContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    border-radius: 16px;
+    padding: 8px 16px 0 16px;
+    word-break: break-word;
+}
+
+div.chatMessageWrapper {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    max-width: 80vw;
+}
+
+div.chatMessageWrapper ol,
+div.chatMessageWrapper ul,
+div.chatMessageWrapper p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* Override some link styling by Katex to improve rendering */
+div.chatMessageWrapper a span {
+    display: revert !important;
+}
+
+div.khojfullHistory {
+    border-width: 1px;
+    padding-left: 4px;
+}
+
+div.youfullHistory {
+    max-width: 100%;
+}
+
+div.chatMessageContainer.youfullHistory {
+    padding-left: 0px;
+}
+
+div.you {
+    background-color: hsla(var(--secondary));
+    align-self: flex-end;
+    border-radius: 16px;
+}
+
+div.khoj {
+    background-color: transparent;
+    color: hsl(var(--accent-foreground));
+    align-self: flex-start;
+}
+
+div.khojChatMessage {
+    padding-top: 8px;
+    padding-left: 16px;
+}
+
+div.emptyChatMessage {
+    display: none;
+}
+
+div.imagesContainer {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+div.imageWrapper {
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
+div.imageWrapper img {
+    width: auto;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+div.khoj div.imageWrapper img {
+    height: 512px;
+}
+
+div.khoj div.imageWrapper {
+    flex: 1 1 auto;
+}
+
+div.khoj div.imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+div.chatMessageContainer > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin-top: 0.25rem;
+    margin-right: auto;
+}
+
+div.chatMessageContainer h3 img {
+    width: 24px;
+}
+
+div.you {
+    color: hsla(var(--secondary-foreground));
+}
+
+div.author {
+    font-size: 0.75rem;
+    color: #808080;
+    text-align: right;
+}
+
+div.chatFooter {
+    display: flex;
+    justify-content: space-between;
+    min-height: 28px;
+}
+
+div.chatButtons {
+    display: flex;
+    justify-content: flex-end;
+    width: min-content;
+    border: var(--border-color) 1px solid;
+    border-radius: 16px;
+    position: relative;
+    bottom: -12px;
+    background-color: hsla(var(--secondary));
+}
+
+div.chatFooter button {
+    cursor: pointer;
+    color: hsl(var(--muted-foreground));
+    border: none;
+    border-radius: 16px;
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+div.chatFooter button:hover {
+    background-color: hsla(var(--frosted-background-color));
+}
+
+button.codeCopyButton {
+    cursor: pointer;
+    float: right;
+    border-radius: 8px;
+}
+
+button.codeCopyButton:hover {
+    color: hsla(var(--frosted-background-color));
+}
+
+div.feedbackButtons img,
+button.codeCopyButton img,
+button.copyButton img {
+    width: 24px;
+}
+
+div.trainOfThought strong {
+    font-weight: 500;
+}
+
+div.trainOfThought.primary strong {
+    font-weight: 500;
+    color: hsla(var(--secondary-foreground));
+}
+
+div.trainOfThought.primary p {
+    color: inherit;
+}
+
+div.trainOfThoughtElement {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+}
+
+div.trainOfThoughtElement ol,
+div.trainOfThoughtElement ul {
+    margin: auto;
+    word-break: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    div.youfullHistory {
+        max-width: 90%;
+    }
+
+    div.khoj div.imageWrapper img {
+        width: 100%;
+        height: auto;
+    }
+}
